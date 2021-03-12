@@ -16,3 +16,33 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+//MULTIUSUARIOS:
+
+
+Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('login', 'Auth\LoginController@login');
+
+Route::get('/admin/login', 'Auth\AdminLoginController@index')->name('admin.login');
+Route::post('/admin/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+
+
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+
+
+
+// Rotas Paginas
+
+Route::get('/admin', 'AdminController@index')->name('admin');
+
+
+
+
+
+
+
+
+
+Route::get('/home', 'HomeController@index')->name('home');
+
