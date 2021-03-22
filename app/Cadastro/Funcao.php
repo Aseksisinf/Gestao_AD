@@ -1,0 +1,10 @@
+<?php
+
+namespace App\Models\Cadastro;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Funcao extends Model
+{
+    protected $table = 'funcoes';
+}
